@@ -13,14 +13,15 @@ var discountU18 = 0.20;
 var discountOver65 = 0.40;
 
 // compute
-var price = distance * fare
+var price = distance * fare;
 
-var discount = 0
+var discount = 0;
 if (age < 18) {
-  discount = price * discountU18  
+  discount = price * discountU18;
 } else if (age > 65) {
-  discount = price * discountOver65
+  discount = price * discountOver65;
 }
-price = (price - discount).toFixed(2)
+price = (price - discount).toFixed(2);
 
-console.log(price + '€')
+// display
+document.getElementById('price').innerHTML = price + '€';
